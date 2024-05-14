@@ -1,6 +1,6 @@
-import { getCurrentUser } from "@/app/actions/getCurrentUser"
+import { getCurrentUser } from "@/app/_actions/getCurrentUser"
 import DesktopSidebarHeader from "./DesktopSidebarHeader";
-import getConversations from "@/app/actions/getConversations";
+import getConversations from "@/app/_actions/getConversations";
 import ConversationList from "@/app/conversations/_components/ConversationList";
 
 async function Sidebar({ children }: {
@@ -12,10 +12,15 @@ async function Sidebar({ children }: {
     return (
         <div className="h-full  w-screen flex">
             <aside className="h-full min-w-[300px] bg-zinc-400">
-                <DesktopSidebarHeader />
-                <ConversationList
-                  
+                <DesktopSidebarHeader
+                currentUser={currentUserPrisma}
+               
                 />
+
+                     
+                 <ConversationList
+                    conversations={conversations}
+                />  
             </aside>
             <main>
                 {children}

@@ -3,7 +3,7 @@ import { useParams } from "next/navigation"; // This tool helps us get informati
 import { useMemo } from "react"; // This tool helps us remember things so we don't have to do them again and again.
 
 // This is like a magic spell we're creating. It helps us do something special.
-const useConversation = () => {
+export const useConversation = () => {
     // This is like a little box where we keep things we found in the web address.
     const params = useParams();
 
