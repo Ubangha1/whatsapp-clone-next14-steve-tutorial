@@ -7,6 +7,7 @@ import { useClerk } from "@clerk/nextjs";
 import { Search } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import ConversationBox from "./ConversationBox";
 
 
 
@@ -38,13 +39,13 @@ const ConversationList: React.
                         />
                     </div>
                 </div>
-                 {items.map((item) => (
+                 {/* {items.map((item) => (
                     <ConversationBox
                         key={item.id}
                         data={item}
                         selected={conversationId === item.id}
                     />
-                ))}
+                ))} */}
             </div>
         </aside>
      );
